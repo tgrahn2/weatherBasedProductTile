@@ -1,0 +1,43 @@
+{
+  "name": "Weather Driven Product Tile",
+  "description": "Simple 'weather driven' product tile component enabling the display of a product and linking to its PDP display.",
+  "group": "Components",
+  "attribute_definition_groups": [
+    {
+      "id": "tileProperties",
+      "name": "Need Help?",
+      "description": "To configure this component -- please select a product to render via the component (you can search for a product by specifying a sku or element of the product name).",
+      "attribute_definitions": [
+        {
+          "id": "productHot",
+          "name": "Hot Product",
+          "description": "Represents the 'hot weather' product to render in the tile.  Please ensure that the product is well-formed, online, and has images configured to display via the storefront.",
+          "type": "product",
+          "required": false
+        },
+        {
+          "id": "productCold",
+          "name": "Cold Product",
+          "description": "Represents the 'cold weather' product to render in the tile.  Please ensure that the product is well-formed, online, and has images configured to display via the storefront.",
+          "type": "product",
+          "required": false
+        },
+        {
+          "id": "controlTemp",
+          "name": "Control Temperature",
+          "description": "Represents the temperature that will determine a cold / hot weather product to show. For instance, if the Control Temp is 80 and the actual temp is 81, then the HOT weather item will be shown, otherwise the COLD weather item is shown.",
+          "type": "integer",
+          "required": true
+        },
+        {
+          "id": "isDebug",
+          "name": "Debug",
+          "description": "Enabling debug mode will show the actual temperature and city for the locale your cookie is reading.  This could be something different from what you think based on whether you are connected to a VPN or eCDN or caching an older geo value",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

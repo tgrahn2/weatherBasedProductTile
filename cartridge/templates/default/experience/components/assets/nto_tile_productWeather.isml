@@ -1,0 +1,4 @@
+<isinclude url="${URLUtils.url('Tile-Show', 'pid', pdict.product.ID, 'swatches', true)}" />
+<isif condition="${pdict.debug}">
+    <div class="alert alert-danger" align="center" role="alert">${pdict.debugMessage} in ${pdict.city}, ${pdict.state} </div>
+</isif>
